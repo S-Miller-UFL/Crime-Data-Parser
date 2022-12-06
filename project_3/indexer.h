@@ -17,7 +17,7 @@ private:
 	std::set<min_heap::node*> crimes;
 	std::map<std::string, int> m;
 };
-//O(Nlog(N)+N)
+//Best/Worst:O(1)/O(Nlog(N)+N)
 void indexer::most_common_crime()
 {
 	//O(Nlog(N)))
@@ -47,7 +47,7 @@ void indexer::most_common_crime()
 	std::cout << "most common crime was: " << c << std::endl;
 	m.clear();
 }
-//O(Nlog(N)+N)
+//Best/Worst:O(1)/O(Nlog(N)+N)
 void indexer::most_common_victim()
 {
 	//O(Nlog(N)))
@@ -77,7 +77,7 @@ void indexer::most_common_victim()
 	std::cout << "most common victim demographic was: " << c << std::endl;
 	m.clear();
 }
-//O(Nlog(N)+N)
+//Best/Worst:O(1)/O(Nlog(N)+N)
 void indexer::most_common_area()
 {
 	//O(Nlog(N)))
@@ -107,7 +107,7 @@ void indexer::most_common_area()
 	std::cout << "most common area of crime was: " << c << std::endl;
 	m.clear();
 }
-//O(Nlog(N)+N)
+//Best/Worst:O(1)/O(Nlog(N)+N)
 void indexer::most_common_age()
 {
 	//O(Nlog(N)))

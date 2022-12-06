@@ -4,6 +4,7 @@
 #include "fib_heap.h"
 #include "hash_table.h"
 #include "data reader.h"
+//U = number of times user chooses
 int main()
 {
     std::cout << "loading data, this may take up to 1 minute..." << std::endl;
@@ -14,12 +15,12 @@ int main()
     int input = 0;
     std::string filename;
     bool g = true;
+    //O(U)
     while (g)
     {
         std::cout << "Welcome to the Algorithmos Crimetracker!" << std::endl;
         std::cout << "Please read in what you would like to analyze (file name): ";
-        //std::cin >> filename; // or whatever the readin file name is
-        std::cout << "This software keeps track of crime that occured in los angeles from 2010 to 2017 " << std::endl;
+        std::cout << "This software keeps track of crime that occured in los angeles from 2011 to 2017 " << std::endl;
         std::cout << "What would you like to find with this data? (type a number 1-3) " << std::endl;
         std::cout << "1. Most common crime on specified date" << std::endl;
         std::cout << "2. Most common victim demographic on specified date" << std::endl;
@@ -31,6 +32,7 @@ int main()
             if (input == 1)
             {
                 bool run = true;
+                //O(1),as it only runs once each time.
                 while (run)
                 {
                     //do something
@@ -50,6 +52,7 @@ int main()
                         std::string s = "2011";
                         run = false;
                         bool t = true;
+                        //O(1),as it only runs once each time.
                         while (t)
                         {
                             std::cout << "1: should this operations be performed using a fibonacci heap?" << std::endl;
@@ -57,7 +60,7 @@ int main()
                             std::cin >> w;
                             if (w == 1)
                             {
-                                f->get_crimes_year(s);
+                                f->get_crimes_year(s); //O(N)
                                 in = f->get_indexer();
                                 t = false;
                             }
@@ -218,12 +221,13 @@ int main()
                         std::cout << "invalid input, please try again..." << std::endl;
                     }
                 }
-                in.most_common_crime();
+                in.most_common_crime(); //O(Nlog(N)+N)
             }
         else if (input == 2)
         {
             //do something else
             bool run = true;
+            //O(1),as it only runs once each time.
             while (run)
             {
                 int x = 0;
@@ -266,6 +270,7 @@ int main()
                     std::string s = "2012";
                     run = false;
                     bool t = true;
+                    //O(1),as it only runs once each time.
                     while (t)
                     {
                         std::cout << "1: should this operations be performed using a fibonacci heap?" << std::endl;
@@ -415,6 +420,7 @@ int main()
         else if (input == 3)
         {
             bool run = true;
+            //O(1),as it only runs once each time.
             while (run)
             {
                 //do something else again
@@ -433,6 +439,7 @@ int main()
                     std::string s = "2011";
                     run = false;
                     bool t = true;
+                    //O(1),as it only runs once each time.
                     while (t)
                     {
                         std::cout << "1: should this operations be performed using a fibonacci heap?" << std::endl;
@@ -606,6 +613,7 @@ int main()
         else if (input == 4)
         {
             bool run = true;
+            //O(1),as it only runs once each time.
             while (run)
             {
                 //do something else again!
@@ -624,6 +632,7 @@ int main()
                     std::string s = "2011";
                     run = false;
                     bool t = true;
+                    //O(1),as it only runs once each time.
                     while (t)
                     {
                         std::cout << "1: should this operations be performed using a fibonacci heap?" << std::endl;
